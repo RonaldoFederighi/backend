@@ -29,16 +29,16 @@ routes.post('/incidente', IncidentController.create);
 // Deletar incidente (deleta o registro com id 12)
 // Utiliza o metodo delete passagem de parâmetro Routes params
 // Rota: localhost:3333/incidente/12 
-routes.delete('/incidente/:id', IncidentController.apagar);
+routes.delete('/incidente/:id', IncidentController.delete);
 
 // Fazer Login
 // Utiliza o metodo post e passagem de parametros pelo header
 // Rota: localhost:3333/section
-routes.post('/section', SectionController.login);
+routes.post('/section', SectionController.create);
 
 // Fazer listagem de incidentes de uma ONG específica
 // Utiliza o metodo post e passagem de parametros pelo header
 // Rota: localhost:3333/profile
-routes.post('/profile', ProfileController.index);
+routes.get('/profile', ProfileController.index);
 
 module.exports = routes
